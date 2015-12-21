@@ -5,13 +5,14 @@ import "database/sql"
 import "log"
 import "fmt"
 import "flag"
+//import "strings"
 
 var debug = flag.Bool("debug", false, "enable debugging")
 var password = flag.String("password", "[ibdkifu", "the database password")
 var port *int = flag.Int("port", 1433, "the database port")
-var server = flag.String("server", "192.168.0.194", "the database server")
+var server = flag.String("server", "s01.nopadol.com", "the database server")
 var user = flag.String("user", "sa", "the database user")
-
+var tls = flag.Bool("encrypt", false, "enable encrypt")
 func main() {
 	flag.Parse() // parse the command line args
 
@@ -22,7 +23,8 @@ func main() {
 		fmt.Printf(" user:%s\n", *user)
 	}
 
-	connString := fmt.Sprintf("server=%s;user id=%s;password=%s;port=%d;", *server, *user, *password, *port)
+	connString := fmt.Sprintf("server=%s;user id=%s;password=%s;port=%d", *server, *user, *password, *port  )
+	fmt.Println(connString)
 	if *debug {
 		fmt.Printf(" connString:%s\n", connString)
 	}
@@ -32,23 +34,26 @@ func main() {
 	}
 	defer conn.Close()
 
-	stmt, err := conn.Query("select 1")
+	stmt, err := conn.Query("select top 10 code,name1 from pos.dbo.bcar ")
 	if err != nil {
 		log.Fatal("Prepare failed:", err.Error())
 	}
 	defer stmt.Close()
-	var somenumber int64
-	var somechars string
+	var code string
+	var name string
 	for stmt.Next() {
-		err = stmt.Scan(&somenumber, &somechars)
+		err = stmt.Scan(&code , &name)
+		fmt.Printf("code :%s  , Name : %s\n", code , name)
 	}
 
 
 	if err != nil {
 		log.Fatal("Scan failed:", err.Error())
 	}
-	fmt.Printf("somenumber:%d\n", somenumber)
-	fmt.Printf("somechars:%s\n", somechars)
+
+
+
+
 
 	fmt.Printf("bye\n")
 
