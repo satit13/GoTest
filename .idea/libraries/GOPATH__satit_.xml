@@ -1,26 +1,30 @@
 <component name="libraryTable">
   <library name="GOPATH &lt;satit&gt;">
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/../src.iml" />
-      <root url="file://$PROJECT_DIR$/../github.com" />
+      <root url="file://$PROJECT_DIR$/../git.eclipse.org" />
       <root url="file://$PROJECT_DIR$/../golang.org" />
-      <root url="file://$PROJECT_DIR$/../gotest" />
-      <root url="file://$PROJECT_DIR$/../.idea" />
-      <root url="file://$PROJECT_DIR$/../paybox-test" />
+      <root url="file://$PROJECT_DIR$/../github.com" />
+      <root url="file://$PROJECT_DIR$/../golab" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
     <excluded>
+      <root url="file://$PROJECT_DIR$/../github.com/nsf/gocode/.git" />
+      <root url="file://$PROJECT_DIR$/../github.com/pborman/uuid/.git" />
+      <root url="file://$PROJECT_DIR$/../golang.org/x/net/html/testdata" />
+      <root url="file://$PROJECT_DIR$/../github.com/nsf/gocode/_gccgo" />
+      <root url="file://$PROJECT_DIR$/../github.com/nsf/gocode/_goremote" />
+      <root url="file://$PROJECT_DIR$/../git.eclipse.org/gitroot/paho/org.eclipse.paho.mqtt.golang.git/.git" />
       <root url="file://$PROJECT_DIR$" />
+      <root url="file://$PROJECT_DIR$/../github.com/nsf/gocode/_testing" />
+      <root url="file://$PROJECT_DIR$/../golang.org/x/net/html/charset/testdata" />
+      <root url="file://$PROJECT_DIR$/../golang.org/x/net/.git" />
+      <root url="file://$PROJECT_DIR$/../golang.org/x/net/http2/testdata" />
+      <root url="file://$PROJECT_DIR$/../golang.org/x/crypto/ssh/testdata" />
       <root url="file://$PROJECT_DIR$/../golang.org/x/crypto/.git" />
-      <root url="file://$PROJECT_DIR$/../paybox-test/.git" />
       <root url="file://$PROJECT_DIR$/../golang.org/x/crypto/sha3/testdata" />
       <root url="file://$PROJECT_DIR$/../github.com/denisenkom/go-mssqldb/.git" />
-      <root url="file://$PROJECT_DIR$/../github.com/bradfitz/gomemcache/.git" />
-      <root url="file://$PROJECT_DIR$/../.idea" />
-      <root url="file://$PROJECT_DIR$/../paybox-test/.idea" />
-      <root url="file://$PROJECT_DIR$/../golang.org/x/crypto/ssh/testdata" />
-      <root url="file://$PROJECT_DIR$/../github.com/mkaz/working-with-go/.git" />
+      <root url="file://$PROJECT_DIR$/../golab/.idea" />
     </excluded>
   </library>
 </component>
